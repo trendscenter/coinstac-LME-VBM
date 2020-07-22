@@ -63,148 +63,15 @@
     },
     "output": 
     {
-      "regressions": 
+      "global_result_images": 
       {
-        "label": "Regressions",
-        "type": "array",
-        "items": 
-        {
-          "ROI": {"label": "Region of Interest","type": "string"},
-          "global_stats": 
-          {
-            "label": "Global Stats",
-            "type": "object",
-            "items": 
-            {
-              "parameter_estimates": 
-              {
-                "label": "Parameter Estimates",
-                "type": "object",
-                "items": 
-                {
-                  "beta_vector": {"label": "Beta Vector","type": "array"},
-                  "sigma2": {"label": "Sigma2","type": "array"},
-                  "D_vector": {"label": "D Vector","type": "array"}
-                }
-              },
-              "inference_statistics": 
-              {
-                "label": "Inference Statistics",
-                "type": "object",
-                "items": 
-                {
-                  "llh": {"label": "Log Likelihood","type": "number"},
-                  "resms": {"label": "Residual Mean Squares","type": "number"},
-                  "covB": {"label": "Covariance of Beta","type": "array"},
-                  "contrasts":
-                  {
-                    "label": "Contrasts",
-                    "type": "object",
-                    "items": 
-                    {
-                      "T-Contrasts":
-                      {
-                        "label": "T-Contrasts",
-                        "type": "array",
-                        "items":
-                        {
-                          "name" : {"label": "Contrast Name","type": "string"},
-                          "vector": {"label": "Contrast Vector","type": "array"},
-                          "lbeta": {"label": "LBeta","type": "number"},
-                          "selbeta": {"label": "SELBeta","type": "number"},
-                          "dof": {"label": "DOF","type": "number"},
-                          "tstat": {"label": "T-Statistic","type": "number"},
-                          "pvalue": {"label": "P-Value","type": "number"}
-                        }
-                      },
-                      "F-Contrasts":
-                      {
-                        "label": "F-Contrasts",
-                        "type": "array",
-                        "items":
-                        {
-                          "name" : {"label": "Contrast Name","type": "string"},
-                          "vector": {"label": "Contrast Vector","type": "array"},
-                          "dof": {"label": "DOF","type": "number"},
-                          "fstat": {"label": "F-Statistic","type": "number"},
-                          "pvalue": {"label": "P-Value","type": "number"},
-                          "r2": {"label": "R2 Statistic","type": "number"}
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "local_stats": 
-          {
-            "label": "Local Stats",
-            "type": "object",
-            "items":
-            {
-              "parameter_estimates": 
-              {
-                "label": "Parameter Estimates",
-                "type": "object",
-                "items": 
-                {
-                  "beta_vector": {"label": "Beta Vector","type": "array"},
-                  "sigma2": {"label": "Sigma2","type": "array"},
-                  "D_vector": {"label": "D Vector","type": "array"}
-                }
-              },
-              "inference_statistics": 
-              {
-                "label": "Inference Statistics",
-                "type": "object",
-                "items": 
-                {
-                  "llh": {"label": "Log Likelihood","type": "number"},
-                  "resms": {"label": "Residual Mean Squares","type": "number"},
-                  "covB": {"label": "Covariance of Beta","type": "array"},
-                  "contrasts":
-                  {
-                    "label": "Contrasts",
-                    "type": "object",
-                    "items": 
-                    {
-                      "T-Contrasts":
-                      {
-                        "label": "T-Contrasts",
-                        "type": "array",
-                        "items":
-                        {
-                          "name" : {"label": "Contrast Name","type": "string"},
-                          "vector": {"label": "Contrast Vector","type": "array"},
-                          "lbeta": {"label": "LBeta","type": "number"},
-                          "selbeta": {"label": "SELBeta","type": "number"},
-                          "dof": {"label": "DOF","type": "number"},
-                          "tstat": {"label": "T-Statistic","type": "number"},
-                          "pvalue": {"label": "P-Value","type": "number"}
-                        }
-                      },
-                      "F-Contrasts":
-                      {
-                        "label": "F-Contrasts",
-                        "type": "array",
-                        "items":
-                        {
-                          "name" : {"label": "Contrast Name","type": "string"},
-                          "vector": {"label": "Contrast Vector","type": "array"},
-                          "dof": {"label": "DOF","type": "number"},
-                          "fstat": {"label": "F-Statistic","type": "number"},
-                          "pvalue": {"label": "P-Value","type": "number"},
-                          "r2": {"label": "R2 Statistic","type": "number"}
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
+        "label": "global_result_images",
+        "type": "array"
+      },
+      "local_result_images":
+      {
+        "label": "global_result_images",
+        "type": "array"
       }
     }
   }
