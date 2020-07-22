@@ -1,0 +1,94 @@
+[
+    {
+        "fixed_covariates":
+        { "value": "local0_fixed_covariates.csv" },
+        
+        "random_covariates":
+        { "value": "local0_random_covariates.csv" },
+
+        "random_factor":
+        { "value": "local0_random_factor.csv" },
+
+        "dependents":
+        { "value": "local0_dependents.csv" },
+
+        "mask_threshold":
+        {"value": 0.05 },
+
+        "voxel_size":
+        {"value": 2},
+        
+        "contrasts":
+        {
+            "value":
+            [
+                {
+                "name": {"value": "contrast1"},
+                "vector": {"value": [1,0,0,0]}
+                },
+                {
+                "name": {"value": "contrast2"},
+                "vector": {"value": [0,1,0,0]}
+                },
+                {
+                "name": {"value": "contrast3"},
+                "vector": {"value": [0,0,1,0]}
+                },
+                {
+                "name": {"value": "contrast4"},
+                "vector": {"value": [0,0,0,1]}
+                },
+                {
+                "name": {"value": "contrast5"},
+                "vector": {"value": [[1,0,0,0], [0,1,0,0], [0,0,1,0],[0,0,0,1]]}
+                }
+            ]
+        }
+    },
+    {
+        "fixed_covariates":
+        { "value": "local1_fixed_covariates.csv" },
+        
+        "random_covariates":
+        { "value": "local1_random_covariates.csv" },
+
+        "random_factor":
+        { "value": "local1_random_factor.csv" },
+
+        "dependents":
+        { "value": "local1_dependents.csv" },
+
+        "mask_threshold":
+        {"value": 0.05 },
+
+        "voxel_size":
+        {"value": 2},
+            
+        "contrasts":
+        {
+            "value":
+            [
+                {
+                "name": {"value": "contrast1"},
+                "vector": {"value": [1,0,0,0]}
+                },
+                {
+                "name": {"value": "contrast2"},
+                "vector": {"value": [0,1,0,0]}
+                },
+                {
+                "name": {"value": "contrast3"},
+                "vector": {"value": [0,0,1,0]}
+                },
+                {
+                "name": {"value": "contrast4"},
+                "vector": {"value": [0,0,0,1]}
+                },
+                {
+                "name": {"value": "contrast5"},
+                "vector": {"value": [[1,0,0,0], [0,1,0,0], [0,0,1,0],[0,0,0,1]]}
+                }
+            ]
+        }
+    }
+]
