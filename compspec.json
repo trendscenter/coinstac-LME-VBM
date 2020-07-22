@@ -3,7 +3,7 @@
     "name": "decentralized linear mixed effects model - VBM",
     "id": "dlme_vbm",
     "version": "v1.0.0",
-    "repository": "https:\/\/github.com\/rajikha\/dlme_vbm_test",
+    "repository": "https:\/\/github.com\/trendscenter\/coinstac-LME-VBM",
     "description": "decentralized linear mixed effects model for vbm data"
   },
   "computation": 
