@@ -1,25 +1,25 @@
 {
   "meta": {
     "name": "decentralized linear mixed effects model - VBM",
-    "id": "dlme_vbm",
+    "id": "dlme-vbm",
     "version": "v1.0.0",
     "repository": "https:\/\/github.com\/trendscenter\/coinstac-LME-VBM",
     "description": "decentralized linear mixed effects model for vbm data"
   },
-  "computation": 
+  "computation":
   {
     "type": "docker",
-    "dockerImage": "dlme_vbm",
+    "dockerImage": "dlme-vbm",
     "command": ["python","\/computation\/scripts\/local.py"],
-    "remote": 
+    "remote":
     {
       "type": "docker",
-      "dockerImage": "dlme_vbm",
+      "dockerImage": "dlme-vbm",
       "command": ["python","\/computation\/scripts\/remote.py"]
     },
-    "input": 
+    "input":
     {
-      "fixed_covariates": 
+      "fixed_covariates":
       {
         "label":"fixed_covariates",
         "type":"string",
@@ -54,16 +54,16 @@
       {
         "label":"contrasts",
         "type": "array",
-        "items": 
+        "items":
         {
           "name": {"label":"name","type":"string"},
           "vector": {"label":"vector","type":"array"}
         }
       }
     },
-    "output": 
+    "output":
     {
-      "global_result_images": 
+      "global_result_images":
       {
         "label": "global_result_images",
         "type": "array"

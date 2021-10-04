@@ -15,7 +15,7 @@ import nibabel as nib
 from nilearn.image import resample_img, resample_to_img
 
 MASK = 'mask.nii'
-MNI_TEMPLATE = '/computation/templates/MNI152_T1_1mm_brain.nii'
+MNI_TEMPLATE = os.path.join('/computation', 'assets', 'MNI152_T1_1mm_brain.nii')
 
 '''
 =============================================================================
@@ -40,7 +40,7 @@ def average_nifti(inputdir,dep,outputdir):
             files = files.drop(image)
         else:
             appended_data += image_data
-    
+
     sample_image = nib.load(os.path.join(inputdir, image))
     header = sample_image.header
     affine = sample_image.affine
@@ -69,7 +69,7 @@ def calculate_mask(args):
     input_dir = state_["baseDirectory"]
     cache_dir = state_["cacheDirectory"]
     output_dir = state_["transferDirectory"]
-    
+
     site_ids = input_.keys()
     avg_of_all = sum([
         nib.load(os.path.join(input_dir, site,
@@ -160,8 +160,8 @@ def nifti_to_data(inputdir,files,voxel_size):
 
 '''
 =============================================================================
-The below function generates resultant nifti images for each of the parameter 
-estimates and inference statistics and generates a png image for a 
+The below function generates resultant nifti images for each of the parameter
+estimates and inference statistics and generates a png image for a
 representative slice of the result images
 -----------------------------------------------------------------------------
 It takes as inputs:
@@ -192,7 +192,7 @@ def gen_outputimages(state_list,data,image_fname):
 
 '''
 =============================================================================
-The below function generates a single 4D covariance beta image by 
+The below function generates a single 4D covariance beta image by
 concatenating individual 3d covariance beta images
 -----------------------------------------------------------------------------
 It takes as inputs:
@@ -206,7 +206,7 @@ It returns as outputs:
 =============================================================================
 '''
 def gen_covBimage(outputdir,dimCov):
-    output_files = [os.path.join(outputdir,'covBeta_'+str(d+1)+'.nii.gz') 
+    output_files = [os.path.join(outputdir,'covBeta_'+str(d+1)+'.nii.gz')
                         for d in range(dimCov)]
     output_file = os.path.join(outputdir, 'covBeta.nii.gz')
     ni2_funcs = [nib.Nifti2Image.from_image(nib.load(func)) for func in output_files]

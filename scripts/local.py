@@ -25,19 +25,19 @@ The below function calculates average nifti volume for each local site
 This function takes in the following inputs in args:
 ----------------------------------------------------------------------------
 - input
-    fixed_covariates : csv file containing fixed covariates, each row for an 
+    fixed_covariates : csv file containing fixed covariates, each row for an
     observation
-    dependents : csv file containing list of freesurfer stats file, each row 
+    dependents : csv file containing list of freesurfer stats file, each row
     for an observation
-    random_factor : csv file containing random factor levels for each 
+    random_factor : csv file containing random factor levels for each
     observation (contains one column as only 1 random factor)
     random_covariates : csv file containing design matrix for the random
     factor
-    contrasts : list of contrasts. Contrast vectors to be tested. 
+    contrasts : list of contrasts. Contrast vectors to be tested.
     Each contrast should contain the fields:
     name: A name for the contrast. i.e. Contrast1.
-    vector: A vector for the contrast. 
-    It must be one dimensional for a T test and two dimensional for an F test 
+    vector: A vector for the contrast.
+    It must be one dimensional for a T test and two dimensional for an F test
     For eg., [1, 0, 0] (T contrast) or [[1, 0, 0],[0,1,0]] (F contrast)
     threshold : threshold value for generating mask
     voxel_size : voxel size of the images
@@ -53,11 +53,11 @@ And gives the following output:
     avg_nifti : average nifti volume
     computation_phase : local_0
 - cache:
-    fixed_covariates : csv file containing fixed covariates, each row for 
+    fixed_covariates : csv file containing fixed covariates, each row for
     an observation
-    dependents : csv file containing list of freesurfer stats file, each 
+    dependents : csv file containing list of freesurfer stats file, each
     row for an observation
-    random_factor : csv file containing random factor levels for each 
+    random_factor : csv file containing random factor levels for each
     observation (contains one column as only 1 random factor)
     random_covariates : csv file containing design matrix for the random
     factor
@@ -65,7 +65,7 @@ And gives the following output:
 ============================================================================
 """
 def local_0(args):
-    
+
     input_list = args["input"]
     state_list = args["state"]
 
@@ -74,8 +74,8 @@ def local_0(args):
     voxel_size = input_list["voxel_size"]
     outputdir = state_list["transferDirectory"]
     inputdir = state_list['baseDirectory']
-    
-    average_nifti(inputdir,dep,outputdir)   
+
+    average_nifti(inputdir,dep,outputdir)
 
     output_dict = {
         "threshold": threshold,
@@ -102,7 +102,7 @@ The below function does the following tasks
 1. read the dependent variables, fixed and random covariates from csv files
 and forms the X,Y and Z matrices
 2. calculate the product matrices
-3. solves LME model using pseudo Simplified Fisher Scoring algorithm and 
+3. solves LME model using pseudo Simplified Fisher Scoring algorithm and
 outputs the parameter estimates and inference results
 4. generates resultant images for each of the parameters
 ----------------------------------------------------------------------------
@@ -112,26 +112,26 @@ This function takes in the following inputs in args:
     mask : average of masks from all local sites
     computation_phase : remote_0
 - cache
-    fixed_covariates : csv file containing fixed covariates, each row for an 
+    fixed_covariates : csv file containing fixed covariates, each row for an
     observation
-    dependents : csv file containing list of freesurfer stats file, each row 
+    dependents : csv file containing list of freesurfer stats file, each row
     for an observation
-    random_factor : csv file containing random factor levels for each 
+    random_factor : csv file containing random factor levels for each
     observation (contains one column as only 1 random factor)
     random_covariates : csv file containing design matrix for the random
     factor
-    contrasts : list of contrasts. Contrast vectors to be tested. 
+    contrasts : list of contrasts. Contrast vectors to be tested.
     Each contrast should contain the fields:
     name: A name for the contrast. i.e. Contrast1.
-    vector: A vector for the contrast. 
-    It must be one dimensional for a T test and two dimensional for an F test 
+    vector: A vector for the contrast.
+    It must be one dimensional for a T test and two dimensional for an F test
     For eg., [1, 0, 0] (T contrast) or [[1, 0, 0],[0,1,0]] (F contrast)
     voxel_size : voxel size of the images
 ----------------------------------------------------------------------------
 And gives the following output:
 ----------------------------------------------------------------------------
 - output :
-    nlevels : list containing number of levels for each random factor, as we 
+    nlevels : list containing number of levels for each random factor, as we
     have only one random factor, nlevels is a single value
     nobservns : number of observations
     local_result_images : list of result images from local sites
@@ -145,7 +145,7 @@ And gives the following output:
 ============================================================================
 """
 def local_1(args):
-    
+
     cache_list = args['cache']
     state_list = args['state']
 
@@ -160,6 +160,8 @@ def local_1(args):
 
     [X,Y,Z,ranfac,raneffs,covariates] = lme_utils.form_XYZMatrices(inputdir,fc,dep,rf,rc,voxel_size)
 
+    raise Exception(X,Y,Z,ranfac,raneffs,covariates)
+
     XtX, XtY, XtZ, YtX, YtY, YtZ, ZtX, ZtY, ZtZ = lme_utils.prodMats3D(X,Y,Z)
 
     n = len(X)
@@ -167,12 +169,12 @@ def local_1(args):
     nraneffs = np.array([1])
     tol = 1e-6
     paramVec = reg.pSFS3D(XtX, XtY, XtZ, YtX, YtY, YtZ, ZtX, ZtY, ZtZ, nlevels, nraneffs,tol,n)
-    
+
     nfixeffs = np.shape(X)[1]
     ndepvars = np.shape(YtX)[0]
     [beta,sigma2,vechD,D] = lme_utils.get_parameterestimates(paramVec,nfixeffs,ndepvars,nlevels,nraneffs)
-    
-    
+
+
     prod_matrices = [XtX, XtY, XtZ, YtX, YtY, YtZ, ZtX, ZtY, ZtZ]
     [llh,resms,covB,tstats,fstats] = reg.cal_inference(prod_matrices,n,nfixeffs,ndepvars,nlevels,
                                                         nraneffs,beta,sigma2,D,contrasts)
@@ -180,7 +182,7 @@ def local_1(args):
     local_dict = {'sigmasquared':sigma2, 'covRandomEffects':vechD,
                     'log-likelihood':llh, 'residualmeansquares':resms,
                     'covBeta':covB,'tstats':tstats,'fstats':fstats}
-    
+
     result_imgnames = lme_utils.save_results(state_list,local_dict,covariates)
 
     # Writing covariates and dependents to cache as files
@@ -188,14 +190,14 @@ def local_1(args):
     data_utils.saveBin(os.path.join(cache_dir, 'Y.npy'), Y)
 
     computation_output_dict = {
-        'output': 
+        'output':
         {
             'nlevels': nlevels.tolist(),
             'nobservns': n,
             'local_result_images': result_imgnames,
             'computation_phase': 'local_1'
         },
-        'cache': 
+        'cache':
         {
             'X': 'X.npy',
             'Y': 'Y.npy',
@@ -218,7 +220,7 @@ The below function does the following tasks
 This function takes in the following inputs in args:
 ----------------------------------------------------------------------------
 - input :
-    nlevels_persite : list containing number of levels of random factor for 
+    nlevels_persite : list containing number of levels of random factor for
     each site
     nlevels_global : total levels summed up for all local sites
     nlocalsites : number of local sites
@@ -246,7 +248,7 @@ And gives the following output:
 ============================================================================
 """
 def local_2(args):
-    
+
     cache_list = args['cache']
     input_list = args['input']
     state_list = args['state']
