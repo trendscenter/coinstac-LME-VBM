@@ -164,7 +164,7 @@ def local_1(args):
     dep = fc.index.to_list()
 
     rf = fc.site
-    rc = fc.site.to_list()
+    rc = fc.randomCovar.to_list()
     contrasts=cache_list['contrasts']
     voxel_size = cache_list["voxel_size"]
 

@@ -5,277 +5,332 @@
             "M02108714_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"28",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02110676_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"39",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02111314_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"23",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02114646_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"20",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02116465_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"41",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02117104_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"26",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02118061_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"35",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02118991_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"41",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02121604_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"47",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02123961_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"55",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02130172_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"41",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02135823_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"45",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02138557_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"46",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02139161_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"35",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02142419_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"50",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02142731_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"25",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02145525_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"44",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02150611_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"50",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02151104_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"34",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02152570_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"46",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02155567_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"21",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02156480_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"27",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02159197_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"48",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02161598_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"39",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02165589_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"39",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02169127_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"34",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02169291_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"42",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02179730_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"20",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02185114_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"49",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02185230_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"45",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02189203_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"37",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02192612_swc1t1avg_6mm.nii":{
                "isControl":"true",
                "age":"22",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02101222_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"46",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02103447_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"50",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02104909_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"35",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02108122_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"50",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02109398_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"22",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02129646_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"46",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02130199_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"25",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02131528_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"47",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02131846_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"46",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02133511_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"37",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02134188_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"23",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02140820_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"46",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02143619_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"41",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02156892_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"43",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02163934_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"39",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02169019_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"43",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02172088_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"20",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02172709_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"36",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02173778_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"46",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02181525_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"41",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M02189654_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"44",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02192461_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"40",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M02196211_swc1t1avg_6mm.nii":{
                "isControl":"false",
                "age":"44",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             }
          }
       },
@@ -329,537 +384,644 @@
             "M52202247_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"42",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52210595_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"35",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52211863_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"26",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52213700_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"34",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52218654_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"29",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52221846_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"35",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52227822_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"23",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52231903_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"34",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52233572_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"22",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52234634_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"27",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52237505_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"43",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52237800_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"29",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52243873_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"33",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52247314_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"22",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52254956_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"36",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52255065_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"53",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52256171_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"28",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52257066_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"31",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52257937_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"26",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52258340_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"39",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52258644_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"24",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52259932_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"59",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52262614_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"44",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52269106_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"42",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52269291_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"19",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52269417_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"33",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52271063_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"41",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52271453_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"26",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52273169_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"30",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52274982_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"24",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52280294_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"19",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52280345_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"24",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52286167_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"23",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52289199_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"34",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52290120_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"39",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52291410_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"19",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52293397_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"48",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52295595_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"24",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52296423_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"22",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52297499_swc1t1_brain_6mm.nii":{
                "isControl":"true",
                "age":"24",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52200270_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"25",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52200803_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"26",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52201932_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"44",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52202304_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"37",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52203447_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"20",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52203703_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"54",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52204446_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"24",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52205070_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"40",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52210421_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"23",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52211523_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"49",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52214646_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"20",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52214732_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"25",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52214777_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"31",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52215103_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"29",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52215593_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"42",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52215821_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"29",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52216465_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"22",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52216899_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"27",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52217742_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"27",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52217983_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"39",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52218455_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"30",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52222147_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"30",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52223206_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"27",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52226211_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"20",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52226657_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"28",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52228187_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"25",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52228456_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"20",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52229861_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"47",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52233758_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"20",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52234303_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"43",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52235786_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"25",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52237173_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"42",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52238988_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"40",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52239358_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"33",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52241218_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"23",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52243274_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"22",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52243619_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"25",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52244480_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"33",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52245372_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"22",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52246449_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"28",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52246798_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"21",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52251809_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"57",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52252370_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"28",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52254014_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"19",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52254382_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"46",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52256830_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"20",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52260735_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"28",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52261564_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"27",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52269912_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"21",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52270333_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"20",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52271576_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"22",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52273647_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"21",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52273934_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"43",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52279187_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"24",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52279914_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"46",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52281229_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"42",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52282243_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"24",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52282305_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"27",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52284000_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"27",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52285768_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"19",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52288332_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"24",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52289654_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"28",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52289720_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"37",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52296258_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"23",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52297972_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"44",
-               "site":"2"
+               "site":"2",
+               "randomCovar":"1"
             },
             "M52298177_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"23",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             },
             "M52299968_swc1t1_brain_6mm.nii":{
                "isControl":"false",
                "age":"33",
-               "site":"1"
+               "site":"1",
+               "randomCovar":"1"
             }
          }
       },
