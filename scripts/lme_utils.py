@@ -29,7 +29,7 @@ It takes as inputs:
 - inputdir: base directory containing input csv files.
 - fc: csv file containing fixed covariates, each row for an observation
 - fs_vars: freesurfer regions to be used as response/dependent variables
-- dep : csv file containing list of freesurfer stats file, each row for an 
+- dep : csv file containing list of freesurfer stats file, each row for an
 observation
 - rf : csv file containing random factor levels for each observation (contains
 one column as only 1 random factor)
@@ -45,44 +45,47 @@ It returns as outputs:
 =============================================================================
 '''
 def form_XYZMatrices(inputdir,fc,dep,rf,rc,voxel_size):
-    
-    data_f = pd.read_csv(os.path.join(inputdir,fc))
+    data_f = fc
     covariates=[]
     covariates.extend(['const'])
     covariates.extend(list(data_f.columns))
-    
+
     data_f['isControl'] = data_f['isControl']*1
     cols_categorical = [col for col in data_f if data_f[col].dtype == object]
     cols_mono = [col for col in data_f if data_f[col].nunique() == 1]
-    
+
     # Dropping columsn with unique values
     data_f = data_f.drop(columns=cols_mono)
-    
+
     # Creating dummies on non-unique categorical variables
     cols_nodrop = set(cols_categorical) - set(cols_mono)
     data_f = pd.get_dummies(data_f, columns=cols_nodrop, drop_first=True)
-    
+
     data_f = data_f.dropna(axis=0, how='any')
     data_f = data_f.to_numpy()
 
+    X = data_f
     X = sm.add_constant(data_f)
+
     n=len(X)
 
-    files = pd.read_csv(os.path.join(inputdir,dep))
-    files = files['VBM_files']
+    files = dep
     Y = nifti_to_data(inputdir,files,voxel_size)
-    
-    ranfac = pd.read_csv(os.path.join(inputdir,rf))
-    ranfac = ranfac.to_numpy()
-    nlevels = np.max(ranfac)
 
-    raneffs = pd.read_csv(os.path.join(inputdir,rc))
-    raneffs = raneffs[raneffs.columns[0]].tolist()
+    #raise Exception(Y)
+
+    #ranfac = rf
+    ranfac = rf.reshape((rf.shape[0], 1))
+    nlevels = np.max(ranfac)
+    #nlevels = int(nlevels)
+
+    raneffs = rc
 
     Z = np.zeros([n, nlevels], dtype=int)
+
     for i in range(n):
-        Z[i][ranfac[i][0]-1] = raneffs[i]
-    
+        Z[i][ranfac[i]-1] = raneffs[i]
+
     return(X,Y,Z,ranfac,raneffs,covariates)
 
 '''
@@ -116,7 +119,7 @@ def prodMats3D(X,Y,Z):
     Y1[:,:,0]=Y
     Y=Y1
     Z=np.array(Z)
-    
+
     # Work out the product matrices (non spatially varying)
     XtX = (X.transpose() @ X).reshape(1, X.shape[1], X.shape[1])
     XtY = X.transpose() @ Y
@@ -126,14 +129,14 @@ def prodMats3D(X,Y,Z):
     YtZ = Y.transpose(0,2,1) @ Z
     ZtX = XtZ.transpose(0,2,1)
     ZtY = YtZ.transpose(0,2,1)
-    ZtZ = (Z.transpose() @ Z).reshape(1, Z.shape[1], Z.shape[1])    
+    ZtZ = (Z.transpose() @ Z).reshape(1, Z.shape[1], Z.shape[1])
 
     # Return product matrices
     return(XtX, XtY, XtZ, YtX, YtY, YtZ, ZtX, ZtY, ZtZ)
 
 '''
 =============================================================================
-The below function extracts the parameters estimated in LME from paramVec and 
+The below function extracts the parameters estimated in LME from paramVec and
 reconstructs D .
 -----------------------------------------------------------------------------
 It takes as inputs:
@@ -158,7 +161,7 @@ def get_parameterestimates(paramVec,p,v,nlevels,nraneffs):
 
      # Output beta estimate
     beta = paramVec[:, 0:p]
-    
+
     # Output sigma2 estimate
     sigma2 = paramVec[:,p:(p+1),:]
 
@@ -171,7 +174,7 @@ def get_parameterestimates(paramVec,p,v,nlevels,nraneffs):
     # D as a dictionary
 
     Ddict[0] = npMatrix3d.vech2mat3D(paramVec[:,IndsDk[0]:IndsDk[1],:])
-    
+
     # Full version of D
     D = npMatrix3d.getDfromDict3D(Ddict, nraneffs, nlevels)
 
@@ -184,7 +187,7 @@ effects from all local sites.
 -----------------------------------------------------------------------------
 It takes as inputs:
 -----------------------------------------------------------------------------
-- nlevels_persite : list containing number of levels of random factor for 
+- nlevels_persite : list containing number of levels of random factor for
     each site
 - nlevels_global : total levels summed up for all local sites
 - nlocalsites : number of local sites
@@ -211,8 +214,8 @@ def form_globalZMatrix(nlevels_persite,nlevels_global,nlocalsites,clientId,ranfa
             else:
                 for i in range(s):
                     col_start = col_start+nlevels_persite[i]
-    
-    
+
+
     ranfac = np.array(ranfac)
     for i in range(n):
         Z[i][col_start+ranfac[i][0]-1] = raneffs[i]
@@ -230,7 +233,7 @@ each of the stats contains
     sigma2
     vechD
 - inference stats
-    llh : 
+    llh :
     resms
     covB
     tstats
@@ -263,7 +266,7 @@ def save_results(state_list,dict_params,covariates):
 def save_parameters(state_list,data,p,covariates):
     outputdir = state_list["outputDirectory"]
     result_imgnames = []
-    if p=='covBeta': 
+    if p=='covBeta':
         dimCov = len(covariates)**2
         for d in range(dimCov):
             temp = np.asarray(data)
@@ -272,7 +275,7 @@ def save_parameters(state_list,data,p,covariates):
             gen_outputimages(state_list,temp,image_fname)
         output_file = gen_covBimage(outputdir,dimCov)
         result_imgnames.append(output_file)
-    
+
     elif p=='tstats' or p=='fstats':
         if p=='tstats':
             stats = ['Beta','stderrorBeta','dof','t-stat','p-value']
@@ -286,12 +289,12 @@ def save_parameters(state_list,data,p,covariates):
                 temp = np.squeeze(np.asarray(temp[2][s]))
                 gen_outputimages(state_list,temp,image_fname)
                 result_imgnames.append(os.path.join(outputdir,image_fname+'.nii.gz'))
-    
+
     else:
         image_fname = p
         temp = np.asarray(data)
         gen_outputimages(state_list,temp,image_fname)
         result_imgnames.append(os.path.join(outputdir,image_fname+'.nii.gz'))
-    
+
     return(result_imgnames)
 

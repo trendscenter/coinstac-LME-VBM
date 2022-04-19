@@ -13,10 +13,14 @@ import regression as reg
 import lme_utils
 import data_utils
 import os
-from image_utils import average_nifti
+from image_utils import average_nifti, gen_dummyMask
 import warnings
 with warnings.catch_warnings():
     warnings.simplefilter('ignore')
+import coinstacparsers
+from coinstacparsers import parsers
+import pandas as pd
+
 
 """
 ============================================================================
@@ -69,11 +73,21 @@ def local_0(args):
     input_list = args["input"]
     state_list = args["state"]
 
-    dep = input_list['dependents']
+    covariates = input_list["covariates"]
     threshold = input_list["mask_threshold"]
     voxel_size = input_list["voxel_size"]
     outputdir = state_list["transferDirectory"]
     inputdir = state_list['baseDirectory']
+    cache_dir = state_list["cacheDirectory"]
+    maskfile = input_list["mask_file"]
+
+    #mask = os.path.join('/computation', 'assets', 'mask_6mm.nii')
+    #X = my_vbm_parser(args)
+    mask = os.path.join(inputdir, maskfile) if maskfile and os.path.exists(os.path.join(inputdir, maskfile)) \
+                else gen_dummyMask(os.path.join(inputdir, list(covariates.keys())[0]), cache_dir)
+    (X, y) = parsers.vbm_parser(args, mask)
+
+    dep = X.index
 
     average_nifti(inputdir,dep,outputdir)
 
@@ -84,10 +98,7 @@ def local_0(args):
         "computation_phase": "local_0"
     }
     cache_dict = {
-        'fixed_covariates': input_list['fixed_covariates'],
-        'dependents': dep,
-        'random_factor': input_list['random_factor'],
-        'random_covariates': input_list['random_covariates'],
+        'covariates': covariates,
         'contrasts': input_list['contrasts'],
         "voxel_size": voxel_size,
     }
@@ -151,16 +162,25 @@ def local_1(args):
 
     cache_dir = state_list["cacheDirectory"]
     inputdir = state_list['baseDirectory']
-    fc = cache_list['fixed_covariates']
-    dep = cache_list['dependents']
-    rf = cache_list['random_factor']
-    rc = cache_list['random_covariates']
+
+    covars = cache_list['covariates']
+
+    #TODO: check if it is better to move this to local_0
+
+    fc_old = pd.DataFrame.from_dict(covars).T
+
+    fc = fc_old.apply(pd.to_numeric, errors='ignore')
+
+    dep = fc.index.to_list()
+
+    rf = fc.pop('site').to_numpy()
+    rc = fc.pop('randomCovar').to_list()
+    ################
+
     contrasts=cache_list['contrasts']
     voxel_size = cache_list["voxel_size"]
 
     [X,Y,Z,ranfac,raneffs,covariates] = lme_utils.form_XYZMatrices(inputdir,fc,dep,rf,rc,voxel_size)
-
-    raise Exception(X,Y,Z,ranfac,raneffs,covariates)
 
     XtX, XtY, XtZ, YtX, YtY, YtZ, ZtX, ZtY, ZtZ = lme_utils.prodMats3D(X,Y,Z)
 
@@ -314,3 +334,4 @@ if __name__ == '__main__':
         sys.stdout.write(computation_output)
     else:
         raise ValueError('Error occurred at Local')
+

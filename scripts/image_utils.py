@@ -15,8 +15,8 @@ import nibabel as nib
 from nilearn.image import resample_img, resample_to_img
 
 MASK = 'mask.nii'
+DUMMY_MASK = 'dummy_mask.nii'
 MNI_TEMPLATE = os.path.join('/computation', 'assets', 'MNI152_T1_1mm_brain.nii')
-
 '''
 =============================================================================
 The below function calculates the average nifti volume for each local site
@@ -29,8 +29,9 @@ It takes as inputs:
 =============================================================================
 '''
 def average_nifti(inputdir,dep,outputdir):
-    files = pd.read_csv(os.path.join(inputdir,dep))
-    files = files['VBM_files']
+    # files = pd.read_csv(os.path.join(inputdir,dep))
+    # files = files['VBM_files']
+    files = dep
     Y=[]
     appended_data = 0
     for image in files:
@@ -215,3 +216,31 @@ def gen_covBimage(outputdir,dimCov):
     for file in output_files:
         os.remove(file)
     return(output_file)
+
+
+'''
+=============================================================================
+The below function generates a mask image with all 1's. The generated mask is
+mainly used with vbm_parser of coinstacparsers package. This mask will help to
+load the input nii file without any modifications.
+-----------------------------------------------------------------------------
+It takes as inputs:
+-----------------------------------------------------------------------------
+- outputDir : output dir of the dummy mask file
+- sampleInputFilename : One of the input nii images
+-----------------------------------------------------------------------------
+It returns as outputs:
+-----------------------------------------------------------------------------
+- output_file : path and file name of the created dummy mask file
+=============================================================================
+'''
+def gen_dummyMask(sampleInputFilename, outputDir):
+    try:
+        sampleImageData = nib.load(sampleInputFilename).get_fdata()
+        maskDim = sampleImageData.shape
+        dummyMask = nib.Nifti1Image(np.ones((maskDim)), affine=np.eye(4))
+        outputFile = os.path.join(outputDir, DUMMY_MASK)
+        nib.save(dummyMask, outputFile)
+        return outputFile
+    except Exception:
+        raise Exception("Error generating dummy mask.")
