@@ -13,12 +13,10 @@ import regression as reg
 import lme_utils
 import data_utils
 import os
-from image_utils import average_nifti, gen_dummyMask
+from image_utils import average_nifti
 import warnings
 with warnings.catch_warnings():
     warnings.simplefilter('ignore')
-import coinstacparsers
-from coinstacparsers import parsers
 import pandas as pd
 
 
@@ -78,14 +76,9 @@ def local_0(args):
     voxel_size = input_list["voxel_size"]
     outputdir = state_list["transferDirectory"]
     inputdir = state_list['baseDirectory']
-    cache_dir = state_list["cacheDirectory"]
     maskfile = input_list["mask_file"]
 
-    #mask = os.path.join('/computation', 'assets', 'mask_6mm.nii')
-    #X = my_vbm_parser(args)
-    mask = os.path.join(inputdir, maskfile) if maskfile and os.path.exists(os.path.join(inputdir, maskfile)) \
-                else gen_dummyMask(os.path.join(inputdir, list(covariates.keys())[0]), cache_dir)
-    (X, y) = parsers.vbm_parser(args, mask)
+    X = lme_utils.vbm_parser(args)
 
     dep = X.index
 
@@ -165,7 +158,7 @@ def local_1(args):
 
     covars = cache_list['covariates']
 
-    #TODO: check if it is better to move this to local_0
+    # check if it is better to move this to local_0
 
     fc_old = pd.DataFrame.from_dict(covars).T
 

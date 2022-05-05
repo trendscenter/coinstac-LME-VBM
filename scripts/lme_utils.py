@@ -298,3 +298,19 @@ def save_parameters(state_list,data,p,covariates):
 
     return(result_imgnames)
 
+
+def vbm_parser(args):
+    """Parse the nifti (.nii) specific inputspec.json and return the
+    covariate matrix (X) as dataframe"""
+    input_list = args["input"]
+    X_info = input_list["covariates"]
+
+    X_df = pd.DataFrame.from_dict(X_info).T
+
+    X = X_df.apply(pd.to_numeric, errors='ignore')
+    X = pd.get_dummies(X, drop_first=True)
+    X = X * 1
+
+    X.dropna(axis=0, how='any', inplace=True)
+
+    return X
