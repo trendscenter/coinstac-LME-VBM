@@ -166,8 +166,8 @@ def local_1(args):
 
     dep = fc.index.to_list()
 
-    rf = fc.pop('site').to_numpy()
-    rc = fc.pop('randomCovar').to_list()
+    rf = fc.pop('subsite').to_numpy()
+    rc = fc.pop('subsiteEffect').to_list()
     ################
 
     contrasts=cache_list['contrasts']
@@ -327,4 +327,5 @@ if __name__ == '__main__':
         sys.stdout.write(computation_output)
     else:
         raise ValueError('Error occurred at Local')
+
 
