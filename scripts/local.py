@@ -76,7 +76,7 @@ def local_0(args):
     voxel_size = input_list["voxel_size"]
     outputdir = state_list["transferDirectory"]
     inputdir = state_list['baseDirectory']
-    maskfile = input_list["mask_file"]
+    #maskfile = input_list["mask_file"]
 
     X = lme_utils.vbm_parser(args)
 
@@ -327,5 +327,3 @@ if __name__ == '__main__':
         sys.stdout.write(computation_output)
     else:
         raise ValueError('Error occurred at Local')
-
-
