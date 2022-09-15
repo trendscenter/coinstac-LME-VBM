@@ -10,4 +10,5 @@ The full results file set can be [found here](https://mygsu-my.sharepoint.com/:f
 
 As shown in the UI here:
 
-![Results View](https://raw.githubusercontent.com/trendscenter/coinstac-LME-Freesurfer/main/test/results/results.png "Results View")
+![Results View](https://raw.githubusercontent.com/trendscenter/coinstac-LME-VBM/master/test/results/results.png "Results View")
+
